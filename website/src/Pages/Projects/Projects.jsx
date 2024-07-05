@@ -31,10 +31,10 @@ function Projects({ isMenuOpen }) {
                 Explore, create, and inspire with StudioIrem – your ultimate
                 destination for premium design assets.
               </p>
-              <div><a href="/about" className="me-5">
+              <div><a href="https://github.com/iremgeldry/cutout-store" className="me-5" target="_blank">
                 <i className="bi bi-arrow-right me-2"></i>GitHub
               </a>
-                <a href="/about">
+                <a href="https://studioirem.vercel.app/" target="_blank">
                   <i className="bi bi-arrow-right me-2"></i>Live Demo
                 </a></div>
             </Col>
