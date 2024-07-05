@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../website/src/Components/Footer/Footer.scss"
+    ],
+    "names": [],
+    "file": "Footer.min.css"
+}

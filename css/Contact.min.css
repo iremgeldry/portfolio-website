@@ -1,0 +1,2 @@
+.contact{opacity:1;transform:none;transition:1s}@media only screen and (max-width: 600px){.contact{padding:40px;margin-top:50px}}@media only screen and (min-width: 600px){.contact{padding:150px 180px 150px 180px}}.contact hr{height:2px;margin:0 12px 0 12px;background-color:black;opacity:1}.contact li{list-style:none}.contact li a{font-size:20px}.contact.deactive{opacity:0;transform:translateY(-96px) translateZ(0px)}
+/*# sourceMappingURL=Contact.min.css.map */
