@@ -1,25 +1,24 @@
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
 
 // Bootstrap CSS and Icons
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Bootstrap JavaScript
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 // Your custom CSS/SCSS
-import '../sass/styles.scss';
-import './App.scss';
+import "../sass/styles.scss";
+import "./App.scss";
 
 // Components
-import Navigationbar from './Components/Navbar/Navigationbar';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
-import Home from './Pages/Home/Home';
-import Projects from './Pages/Projects/Projects';
-
+import Navigationbar from "./Components/Navbar/Navigationbar";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import Home from "./Pages/Home/Home";
+import Projects from "./Pages/Projects/Projects";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

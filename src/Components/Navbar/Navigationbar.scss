@@ -1,10 +1,7 @@
-
 .custom-navbar {
   display: flex;
   justify-content: space-between;
   z-index: 10000000000;
-
-
 
   @media only screen and (max-width: 9992px) {
     position: fixed;
@@ -14,12 +11,13 @@
     padding: 40px;
   }
 
-  @media only screen and (min-width: 992px) {position: fixed;
+  @media only screen and (min-width: 992px) {
+    position: fixed;
     top: 96px;
     left: 0;
     right: 0;
-    padding: 0 80px;}
-
+    padding: 0 80px;
+  }
 
   .left-part {
     z-index: 5;
@@ -27,6 +25,12 @@
     .navbar-brand {
       text-decoration: none;
       font-size: 24px;
+      @media only screen and (max-width: 9992px) {
+        font-size: 20px;
+      }
+      @media only screen and (min-width: 992px) {
+        font-size: 24px;
+      }
     }
   }
 
@@ -38,16 +42,24 @@
 
     .language-switch {
       margin-right: 20px;
+      padding: 0;
       background: none;
       border: none;
       color: black;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
+
+      @media only screen and (max-width: 9992px) {
+        scale: 0.75;
+      }
+      @media only screen and (min-width: 992px) {
+        scale: none;
+      }
 
       &.open .bar:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
@@ -106,7 +118,7 @@
       align-items: center;
       height: 100%;
       overflow: hidden;
-      margin: 0;
+      margin: 50px 0 0 0;
       padding: 0;
       list-style: none;
       counter-reset: counter;
@@ -122,13 +134,11 @@
           transform: none;
 
           &:hover {
-            font-variation-settings:
-              'wght' 700,
-              'wdth' 100;
+            font-variation-settings: "wght" 700, "wdth" 100;
           }
 
           &:before {
-            content: '0' counter(counter);
+            content: "0" counter(counter);
             font-size: 1rem;
             letter-spacing: -0.1em;
             margin-right: 0.5rem;

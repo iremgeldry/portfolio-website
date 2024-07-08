@@ -1,8 +1,15 @@
-import React from "react";
-import { Container, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Navbar, Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import "./Navigationbar.scss";
 
 const Navigationbar = ({ toggleMenu, isMenuOpen }) => {
+  const { t, i18n } = useTranslation();
+  const languages = [
+    { code: "en", name: "EN" },
+    { code: "de", name: "DE" },
+  ];
+
   return (
     <>
       <Navbar className="custom-navbar">
@@ -13,7 +20,18 @@ const Navigationbar = ({ toggleMenu, isMenuOpen }) => {
             </Navbar.Brand>
           </div>
           <div className="right-part">
-            {/* <Button className="language-switch">DE</Button> */}
+            {languages.map((language) => (
+              <Button
+                className="language-switch"
+                onClick={() => {
+                  i18n.changeLanguage(language.code);
+                }}
+                key={language.code}
+              >
+                {language.name}
+              </Button>
+            ))}
+
             <div
               className={`menu-toggle ${isMenuOpen ? "open" : ""}`}
               onClick={toggleMenu}
@@ -29,22 +47,22 @@ const Navigationbar = ({ toggleMenu, isMenuOpen }) => {
         <ol className="nav-list">
           <li className=" nav-item">
             <a href="/" className="nav-link">
-              HOME
+              {t("HOME")}
             </a>
           </li>
           <li className=" nav-item">
             <a href="/about" className="nav-link">
-              ABOUT
+              {t("ABOUT")}
             </a>
           </li>
           <li className=" nav-item">
             <a href="/projects" className="nav-link">
-              PROJECTS
+              {t("PROJECTS")}
             </a>
           </li>
           <li className=" nav-item">
             <a href="/contact" className="nav-link">
-              CONTACT
+              {t("CONTACT")}
             </a>
           </li>
         </ol>
@@ -54,3 +72,15 @@ const Navigationbar = ({ toggleMenu, isMenuOpen }) => {
 };
 
 export default Navigationbar;
+
+// {languages.map((language) => (
+//   <Button
+//     className="language-switch"
+//     onClick={() => {
+//       i18n.changeLanguage(language.code);
+//     }}
+//     key={language.code}
+//   >
+//     {language.name == "EN" ?  "DE" : "EN"}
+//   </Button>
+// ))}
