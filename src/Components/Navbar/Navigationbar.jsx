@@ -44,28 +44,30 @@ const Navigationbar = ({ toggleMenu, isMenuOpen }) => {
         </Container>
       </Navbar>
       <div className={`menu ${isMenuOpen ? "active" : ""}`}>
-        <ol className="nav-list">
-          <li className=" nav-item">
-            <a href="/" className="nav-link">
-              {t("HOME")}
-            </a>
-          </li>
-          <li className=" nav-item">
-            <a href="/about" className="nav-link">
-              {t("ABOUT")}
-            </a>
-          </li>
-          <li className=" nav-item">
-            <a href="/projects" className="nav-link">
-              {t("PROJECTS")}
-            </a>
-          </li>
-          <li className=" nav-item">
-            <a href="/contact" className="nav-link">
-              {t("CONTACT")}
-            </a>
-          </li>
-        </ol>
+        <div className="menu-wrapper">
+          <ol className="nav-list">
+            <li className=" nav-item">
+              <a href="/" className="nav-link">
+                {t("HOME")}
+              </a>
+            </li>
+            <li className=" nav-item">
+              <a href="/about" className="nav-link">
+                {t("ABOUT")}
+              </a>
+            </li>
+            <li className=" nav-item">
+              <a href="/projects" className="nav-link">
+                {t("PROJECTS")}
+              </a>
+            </li>
+            <li className=" nav-item">
+              <a href="/contact" className="nav-link">
+                {t("CONTACT")}
+              </a>
+            </li>
+          </ol>
+        </div>
       </div>
     </>
   );

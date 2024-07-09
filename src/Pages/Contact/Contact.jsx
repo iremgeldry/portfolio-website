@@ -15,14 +15,14 @@ function Contact({ isMenuOpen }) {
             <h1>{t("contact1")}</h1>
             <hr />
           </Row>
-          <Row className="w-100 contact-info">
-            <Col className="d-flex flex-row p-0">
+          <div className="w-100 contact-info">
+            <Col className="p-0 contact-left">
               <h4 className="me-5">MAIL</h4>
               <p className="email">
                 <i class="bi bi-arrow-up-right"></i> iremcmm@gmail.com
               </p>
             </Col>
-            <Col className="d-flex flex-row p-0">
+            <Col className="contact-right p-0">
               <h4 className="me-5">SOCIAL MEDIA</h4>
               <div>
                 <li className="mb-2">
@@ -45,7 +45,7 @@ function Contact({ isMenuOpen }) {
                 </li>
               </div>
             </Col>
-          </Row>
+          </div>
         </Stack>
       </Container>
     </>

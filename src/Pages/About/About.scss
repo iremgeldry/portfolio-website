@@ -20,125 +20,113 @@
 
   padding: 0;
 
-.about-content{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  @media only screen and (max-width: 768px) {
-    padding: 40px;
-    margin-top: 75px;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    padding: 80px 40px 0px 40px;
-    
-    
-  }
-
-  @media only screen and (min-width: 992px) {
-    padding: 100px 80px 0px 80px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    padding: 120px 240px 0px 240px;
-  }
-
-  
-
-  .header{
-    @media only screen and (min-width: 768px) {
-      margin-top: 50px;
-      
-    }
-
-    h1{
-      padding: 0;
-      margin: 0;
-    }
-
-    hr {
-      height: 2px;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      opacity: 1;
-    }
-
-  }
-
-  .about-profile {
+  .about-content {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
+    height: 100%;
 
-    .profile-left {
-      padding: 0;
-      .profilepic {
-        width: 100%;
-        //max-width: 750px;
-      }
+    @media only screen and (max-width: 768px) {
+      padding: 40px;
+      margin-top: 75px;
     }
 
-    .profile-right {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      text-align:justify;
+    @media only screen and (min-width: 768px) {
+      padding: 80px 40px 0px 40px;
+    }
 
-      @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 992px) {
+      padding: 100px 80px 0px 80px;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      padding: 120px 240px 0px 240px;
+    }
+
+    .header {
+      @media only screen and (min-width: 768px) {
         margin-top: 50px;
       }
-      
 
-      p {
-        font-size: 1rem;
-        font-weight: 400;
-
-      margin: 0 0 10px 0;
-      padding: 0;
-
-      @media only screen and (min-width: 992px) {
-        font-size: 1.2rem;
-      }
+      h1 {
+        padding: 0;
+        margin: 0;
       }
 
-      a {
-        font-size: 18px;
-        width: fit-content;
-        i {
-          -webkit-text-stroke: 1px;
+      hr {
+        height: 2px;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        opacity: 1;
+      }
+    }
+
+    .about-profile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+
+      .profile-left {
+        padding: 0;
+        .profilepic {
+          width: 100%;
+          //max-width: 750px;
+        }
+      }
+
+      .profile-right {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: justify;
+
+        @media only screen and (max-width: 767px) {
+          margin: 50px 0 0 0;
         }
 
-        &::after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: '';
-          display: block;
-          height: 2px;
-          position: relative;
-          transition:
-            width 0.4s ease 0s,
-            left 0.4s ease 0s;
-          width: 0px;
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+
+          margin: 0 0 10px 0;
+          padding: 0;
+
+          @media only screen and (min-width: 992px) {
+            font-size: 1.1rem;
+          }
         }
 
-        &:hover,
-        :focus {
-          border: none;
+        a {
+          font-size: 18px;
+          width: fit-content;
+          i {
+            -webkit-text-stroke: 1px;
+          }
+
           &::after {
-            background-color: black;
-            width: 100%;
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: width 0.4s ease 0s, left 0.4s ease 0s;
+            width: 0px;
+          }
+
+          &:hover,
+          :focus {
+            border: none;
+            &::after {
+              background-color: black;
+              width: 100%;
+            }
           }
         }
       }
     }
   }
-  
-}
-
 
   &.deactive {
     opacity: 0;

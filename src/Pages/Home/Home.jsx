@@ -17,7 +17,6 @@ function Home({ isMenuOpen }) {
               Frontend Developer.
             </Trans>
           </h1>
-          <h6 className="fst-italic">{t("greeting2")}</h6>
           <p>{t("greeting3")}</p>
         </div>
         <a href="/about">
